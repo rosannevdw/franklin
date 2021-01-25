@@ -1,0 +1,26 @@
+/*FONTS*/
+
+/* Quincy CF italic */
+@font-face {
+  font-family: "Quincy-italic";
+  src: url("/assets/fonts/QuincyCF-Italic.woff") format("woff");
+}
+/* Quincy CF regular */
+@font-face {
+  font-family: "Quincy-text";
+  src: url("/assets/fonts/QuincyCF-Text.woff") format("woff");
+}
+
+$fontprim: "franklin-gothic-urw", "trebuchet MS", sans-serif;
+$fontsec: "Quincy-text", Georgia, serif;
+$fontprimcond: "franklin-gothic-urw-cond", "trebuchet MS", sans-serif;
+
+/*COLORS*/
+$bluedark: #160e44;
+$bluebright: #82cfd5;
+$orangered: #e95756;
+
+
+/*OTHER*/
+$mobile_break: 900px;
+$mobile_break_small: 500px;

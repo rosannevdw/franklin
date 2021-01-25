@@ -1,0 +1,44 @@
+@import "base";
+
+/*GENERAL*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+   scroll-behavior: smooth;
+}
+body {
+  color: $bluedark;
+  font-size: 18px;
+  hyphens: none;
+  text-rendering: optimizeLegibility;
+  font-family: $fontprim;
+}
+* + * {
+  margin-top: 1.5em;
+}
+p {
+  line-height: 1.5rem;
+  hyphens: auto;
+}
+h1, h2, h3, h4 {
+  font-family: $fontsec;
+}
+h2 {
+}
+h3 {
+}
+a {
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+.padding {
+  padding: 0 2em 0 2em;
+}
+@import "navigation";
+@import "footer";
+@import "intro";

@@ -1,0 +1,14 @@
+@import "base";
+
+footer {
+  font-size: 0.9rem;
+  padding: 2rem;
+  background-color: $bluebright;
+  color: $bluedark;
+  .address {
+    margin-bottom: 2em;
+    p + p {
+      margin: 0;
+    }
+  }
+}

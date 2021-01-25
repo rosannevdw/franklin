@@ -1,0 +1,37 @@
+<div class="hero">
+  <% if concert.image.present? %>
+    <img src="<%= concert.image %>" alt="">
+    <% else %>
+    <img src="/images/uploads/HOS_Stuhl.jpg" alt="">
+  <% end %>
+    <div class="herocontent">
+          <h2><%= concert.title %></h2>
+          <h3><%= I18n.localize(Time.parse(concert.date), format: '%d. %B %Y') %><br/>
+            <%= I18n.localize(Time.parse(concert.date), format: '%H:%M') %> Uhr<br/>
+          <%= concert.location %></h3>
+    </div>
+</div>
+
+<div class="wrap">
+  <p>
+    <% if concert.tickets.present? %>
+      <a href="<%= concert.tickets %>" class="btn" target="_blank">Tickets</a>
+    <% end %>
+    <% if concert.flyer.present? %>
+      <a href="<%= concert.flyer %>" class="btn" target="_blank">Flyer</a>
+    <% end %>
+    <% if concert.programm.present? %>
+      <a href="<%= concert.programm %>" class="btn" target="_blank">Programmheft</a>
+    <% end %>
+    <a href="/konzerte/<%= concertname %>.ics" class="btn">Kalenderdatei <img src="/images/icons/download_b.svg" alt="" class="btnicon"></a>
+    <% if concert.facebook.present? %>
+      <a href="<%= concert.facebook %>" target="_blank" class="icon">
+        <img src="/images/icons/icon_fb.svg" alt="icon facebook">
+      </a>
+    <% end %>
+  </p>
+  <%= markdown concert.body %>
+</div>
+<div class="wrap">
+  <p class="align-right"><a href="/konzerte" class="btn">&larr; alle Konzerte</a></p>
+</div>
