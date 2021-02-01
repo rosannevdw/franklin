@@ -1,26 +1,17 @@
-<header>
-
+<header class="header">
   <a href="/" class="logo">
     <h1>
         <img src="/assets/images/studiofranklin-logo2.svg" alt="studio franklin">
     </h1>
   </a>
-
-  <div class="navigation" id="top">
-      <input type="checkbox" class="hamburgercheck">
-      <span></span>
-      <span></span>
-      <span></span>
-      <nav>
-        <ul class="navlist">
-        <% sitemap.resources.select{|page| page.ext == '.html' && page.data.order.present?}
-           .sort_by{|page| page.data.order }.each do |page| %>
-          <li class="<%= if page == current_page then 'active' end %>">
-            <%= link_to page.data.title, page %>
-          </li>
-          <% end %>
-        </ul>
-    </nav>
-  </div>
-
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <% sitemap.resources.select{|page| page.ext == '.html' && page.data.order.present?}
+       .sort_by{|page| page.data.order }.each do |page| %>
+      <li class="<%= if page == current_page then 'active' end %>">
+        <%= link_to page.data.title, page %>
+      </li>
+      <% end %>
+    </ul>
 </header>
