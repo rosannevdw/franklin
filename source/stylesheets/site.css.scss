@@ -9,6 +9,10 @@
 html {
    scroll-behavior: smooth;
 }
+main {
+  margin: 100px 30px 30px 30px;
+  min-height: 100vh;
+}
 body {
   color: $bluedark;
   font-size: 18px;
@@ -40,6 +44,7 @@ summary {
   background-color: yellow;
 }
 
-@import "navigation";
+@import "header";
+@import "menu-nav";
 @import "footer";
 @import "intro";

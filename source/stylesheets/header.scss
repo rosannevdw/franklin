@@ -1,0 +1,19 @@
+@import "base";
+
+header {
+  background-color: white;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-family: $fontprim;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  .logo {
+    font-size: 1.5em;
+    float: left;
+
+  }
+}

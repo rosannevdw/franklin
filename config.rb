@@ -13,11 +13,11 @@ page '/*.txt', layout: false
 
 activate :livereload
 activate :directory_indexes
-activate :blog do |blog|
-  blog.permalink = "portfolio/{title}.html"
-  blog.sources = "portfolio/{title}.html"
-  blog.layout = "project"
-end
+#activate :blog do |blog|
+#  blog.permalink = "portfolio/{title}.html"
+#  blog.sources = "portfolio/{title}.html"
+#  blog.layout = "project"
+#end
 
 configure :build do
   activate :minify_css
